@@ -1,0 +1,69 @@
+<html>
+    <head>
+<title>kada fry</title>
+<link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
+        <h1>KADA FRY</h1>
+        <h2><p>Enjoy our vast diverse meals</p></h2>
+
+        <h3><strong>SNACKS</strong></h3>
+        <ul>
+        <li>Meat pie - #500</li><a href="checkout.html"><button>add to cart</button></a>
+        <li>Tacos - #200</li><a href="checkout.html"><button>add to cart</button></a>
+        <li>Scothed eggs - #700</li><a href="checkout.html"><button>add to cart</button></a>
+        </ul>
+
+        <h3><strong>MEALS</strong></h3>
+        <ul>
+            <li>Fried rice - #1400</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Jollof rice - #1200</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>White rice & Stew - #1000</li><a href="checkout.html"><button>add to cart</button></a>
+        </ul>
+
+        <h3><strong>DESERTS</strong></h3>
+        <ul>
+            <li>Ice cream - #200</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Cake - #1700</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Biscuits - #150</li><a href="checkout.html"><button>add to cart</button></a>
+        </ul>
+
+        <h3><strong>CONTINENTAL DISHES</strong></h3>
+        <ul>
+            <li>Amala & Ewedu - #2500</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Sushi - #1600</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Fufu & Banga soup - #2000</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Fish & Chips - #1400</li><a href="checkout.html"><button>add to cart</button></a>
+            <li>Abacha & Stock fish - #1200</li><a href="checkout.html"><button>add to cart</button></a>
+        </ul>
+
+        <h3><strong>CONTACT US</strong></h3>
+        <p>Email:kadafry@gmail.com</p>
+        <p>Phone:070123567671</p>
+        <p>Adress:No 48, Misson Road,Benin City,Edo State</p>
+
+        <form id="contactForm">
+    <input type="text" id="userMessage" placeholder="message us" required />
+    <button type="submit">Send</button>
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const message = document.getElementById('userMessage').value;
+
+    const response = await fetch('http://localhost:3000/send-feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+    if (data.success) {
+        alert('thank you for your feedback');
+    }
+});
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,115 @@
+/* --- Basic Reset & Body Styling --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffdd0; /* Warm, appetizing cream color */
+    color: #ff9d00;
+    line-height: 1.6em;
+    max-width: 800px; /* Keeps the menu from stretching too wide on big screens */
+    margin: 0 auto; /* Centers the page */
+    padding: 30px 20px;
+}
+
+/* --- Headers (Title & Subtitle) --- */
+h1 {
+    text-align: center;
+    color: #ff7f00; /* Rich orange/red for food */
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff7f00;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+h2 p {
+    margin: 0; /* Fixes spacing for the nested <p> tag in your HTML */
+}
+
+/* --- Category Headers --- */
+h3 {
+    color: #ff7f00; /* Deep red */
+    border-bottom: 2px solid #ff7f00; /* Orange divider */
+    padding-bottom: 8px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* --- Menu Items & Buttons --- */
+ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Formatting the list items to sit nicely next to the buttons */
+li {
+    display: inline-block;
+    width: 75%; /* Gives the text most of the row space */
+    font-size: 1.2rem;
+    padding: 12px 0;
+    border-bottom: 1px dashed #cd850a; /* Subtle divider between food items */
+    font-weight: 500;
+}
+
+button {
+    display: inline-block;
+    background-color: #ff7f00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 20%; /* Button takes up the remaining row space */
+    text-align: center;
+    margin-left: 2%; /* Small gap between item and button */
+}
+
+button:hover {
+    background-color: #99530e; /* Darkens on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight click effect */
+}
+
+/* --- Contact Us Section --- */
+p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* Styling the messaging input and send button at the bottom */
+input[type="text"] {
+    padding: 12px;
+    width: 75%;
+    border: 2px solid #ff7300;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #160202; /* Highlights orange when typing */
+}
+
+
+
